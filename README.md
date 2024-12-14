@@ -1,3 +1,3 @@
-# goit-markup-hw-05
+# goit-markup-hw-06
 
-HTML/CSS homework 05
+HTML/CSS homework 06
