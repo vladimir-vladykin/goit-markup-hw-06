@@ -203,9 +203,8 @@ button {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--cl-iris);
-
-  margin-right: 76px;
 }
+
 .logo-span-dark {
   color: var(--cl-navy-blue);
 }
@@ -218,13 +217,88 @@ button {
 .nav {
   display: flex;
   align-items: center;
-  margin-right: auto;
+
+  /* min-width: 320px; */
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
-.nav-list {
+@media only screen and (max-width: 767px) {
+  /* only for mobile, make nav occupy whole container  */
+  .nav {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .nav {
+    padding-top: 0px;
+    padding-bottom: 0px;
+
+    margin-right: auto;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .nav {
+    padding-top: 0px;
+    padding-bottom: 0px;
+
+    margin-right: auto;
+  }
+}
+
+/* mobile menu icon */
+.mobile-menu-btn {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 40px;
+
+  width: 24px;
+  height: 24px;
+
+  margin-left: auto;
 }
+@media only screen and (min-width: 768px) {
+  .mobile-menu-btn {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .mobile-menu-btn {
+    display: none;
+  }
+}
+
+.mobile-menu-btn-icon {
+  width: 24px;
+  height: 24px;
+  /* stroke: black;
+  fill: black; */
+}
+
+/* navigation list for tablen and desktop */
+.nav-list {
+  display: none;
+}
+@media only screen and (min-width: 768px) {
+  .nav-list {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-left: 120px;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .nav-list {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-left: 176px;
+  }
+}
+
 .nav-link {
   display: inline-block;
   position: relative;
@@ -259,7 +333,27 @@ button {
 
 /* #region Address */
 .address-section {
+  display: none;
 }
+@media only screen and (min-width: 768px) {
+  .address-section {
+    display: block;
+  }
+
+  .address-section-list {
+    display: block;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .address-section {
+    display: block;
+  }
+
+  .address-section-list {
+    display: flex;
+  }
+}
+
 .address-link {
   font-size: 16px;
   line-height: 1.5;
@@ -296,8 +390,19 @@ button {
   align-items: center;
   flex-direction: column;
 
-  padding: 188px 0px;
+  padding: 72px 0px;
 }
+@media only screen and (min-width: 768px) {
+  .hero-container {
+    padding: 112px 0px;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .hero-container {
+    padding: 188px 0px;
+  }
+}
+
 .hero-title {
   font-size: 56px;
   font-weight: 700;
@@ -307,7 +412,17 @@ button {
   color: var(--cl-white);
 
   max-width: 496px;
-  margin-bottom: 48px;
+  margin-bottom: 72px;
+}
+@media only screen and (min-width: 768px) {
+  .hero-title {
+    margin-bottom: 36px;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .hero-title {
+    margin-bottom: 48px;
+  }
 }
 
 .hero-button {
@@ -600,16 +715,67 @@ button {
 /* #region Footer */
 .section-footer {
   background: var(--cl-navy-blue);
-  padding: 100px 0px;
+  padding: 96px 0px;
 }
+@media only screen and (min-width: 768px) {
+  .section-footer {
+    padding: 96px 0px;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .section-footer {
+    padding: 100px 0px;
+  }
+}
+
 .section-footer-container {
   display: flex;
-  align-items: baseline;
+  flex-direction: column;
+  row-gap: 72px;
+  /* align-items: center; */
+}
+@media only screen and (min-width: 768px) {
+  .section-footer-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    column-gap: 24px;
+    align-content: flex-start;
+
+    /* flex-direction: row;
+    justify-items: start;
+    align-items: center; */
+    /* gap: 24px; */
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .section-footer-container {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    column-gap: 0px;
+    align-items: baseline;
+  }
 }
 
 .section-footer-logo-block {
-  margin-right: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+@media only screen and (min-width: 768px) {
+  .section-footer-logo-block {
+    display: block;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .section-footer-logo-block {
+    display: block;
+    margin-right: 120px;
+  }
+}
+
 .section-footer-link {
   display: inline-block;
   margin-bottom: 16px;
@@ -620,11 +786,33 @@ button {
 }
 
 .section-footer-social-block {
+  justify-items: center;
 }
+@media only screen and (min-width: 768px) {
+  .section-footer-social-block {
+    justify-items: start;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .section-footer-social-block {
+    justify-items: start;
+  }
+}
+
 .social-media-list {
   display: flex;
   gap: 16px;
 }
+/* FIXME needed??? */
+@media only screen and (min-width: 768px) {
+  .social-media-list {
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .social-media-list {
+  }
+}
+
 .social-media-text {
   color: var(--cl-white);
   font-weight: 500;
@@ -653,17 +841,52 @@ button {
 
 /* subscribe */
 .section-footer-subscribe-block {
-  margin-left: 80px;
+  margin-left: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media only screen and (min-width: 768px) {
+  .section-footer-subscribe-block {
+    margin-left: 0px;
+    align-items: start;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .section-footer-subscribe-block {
+    margin-left: 80px;
+    align-items: start;
+    row-gap: 0px;
+    /* flex-direction: row; */
+  }
 }
 .subscribe-text {
   color: var(--cl-white);
   font-weight: 500;
   margin-bottom: 16px;
 }
+
 .subscribe-form {
   display: flex;
-  gap: 24px;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 16px;
 }
+@media only screen and (min-width: 768px) {
+  .subscribe-form {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .subscribe-form {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+  }
+}
+
 .subscribe-email-input {
   width: 264px;
   height: 40px;
