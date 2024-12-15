@@ -432,13 +432,19 @@ button {
 /* FIXMe so maybe actual padding not in section, but in wrapper???? */
 .section-our-team {
   background: var(--cl-cloud);
-  padding: 96px 12px;
+  /* padding: 96px 12px; */
+  /* padding: 96px 0px; */
+  padding-top: 96px;
+  padding-bottom: 96px;
   --grid-items-count: 1;
   --grid-row-gap: 72px;
 }
 @media only screen and (min-width: 768px) {
   .section-our-team {
-    padding: 96px 92px;
+    /* padding: 96px 92px; */
+    /* padding: 96px 0px; */
+    padding-top: 96px;
+    padding-bottom: 96px;
     --grid-items-count: 2;
     --grid-column-gap: 24px;
     --grid-row-gap: 72px;
@@ -446,14 +452,29 @@ button {
 }
 @media only screen and (min-width: 1158px) {
   .section-our-team {
-    padding: 120px 0px;
+    /* padding: 120px 0px; */
+    /* padding: 120px 0px; */
+    padding-top: 120px;
+    padding-bottom: 120px;
     --grid-items-count: 4;
     --grid-column-gap: 24px;
   }
 }
 .our-team-wrapper {
   /* FIXME actually irelleveant? */
+  padding: 0px 12px;
 }
+@media only screen and (min-width: 768px) {
+  .our-team-wrapper {
+    padding: 0px 92px;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .our-team-wrapper {
+    padding: 0px;
+  }
+}
+
 .section-our-team-title {
   margin-bottom: 72px;
 }
@@ -507,12 +528,24 @@ button {
 
 /* #region Portfolio*/
 .section-portfolio {
-  --grid-items-count: 3;
+  --grid-items-count: 1;
   --grid-column-gap: 24px;
   --grid-row-gap: 48px;
 
-  padding: 120px 0px;
+  padding: 96px 0px;
 }
+@media only screen and (min-width: 768px) {
+  .section-portfolio {
+    --grid-items-count: 2;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .section-portfolio {
+    --grid-items-count: 3;
+    padding: 120px 0px;
+  }
+}
+
 .portfolio-section-title {
   margin-bottom: 72px;
 }
