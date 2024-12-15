@@ -377,12 +377,61 @@ button {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url('../images/hero-background.jpg');
+    url('../images/hero_mobile.jpg');
 
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
+@media (min-resolution: 192dpi) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url('../images/hero_mobile@2x.jpg');
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url('../images/hero_tablet.jpg');
+  }
+
+  @media (min-resolution: 192dpi) {
+    .hero {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url('../images/hero_tablet@2x.jpg');
+    }
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url('../images/hero_desktop.jpg');
+  }
+
+  @media (min-resolution: 192dpi) {
+    .hero {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url('../images/hero_desktop@2x.jpg');
+    }
+  }
+}
+
 .hero-container {
   display: flex;
   align-items: center;
@@ -972,7 +1021,7 @@ button {
   width: 100%;
   max-width: 408px;
   min-height: 584px;
-  padding: 72px 24px 24px 24px;
+  padding: 72px 16px 16px 16px;
 
   background-color: var(--cl-dairy);
   border-radius: 4px;
@@ -982,6 +1031,17 @@ button {
   transition: var(--medium-trns);
   transition-property: transform;
 }
+@media only screen and (min-width: 768px) {
+  .modal {
+    padding: 72px 24px 24px 24px;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .modal {
+    padding: 72px 24px 24px 24px;
+  }
+}
+
 .backdrop.is-open .modal {
   transform: translateX(-50%) translateY(-50%);
 }
