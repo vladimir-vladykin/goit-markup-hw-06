@@ -95,9 +95,9 @@ button {
   padding-left: 16px;
   padding-right: 16px;
 
-  /* FIXME for debug only, remove later */
-  outline: 2px solid red;
-  outline-offset: -2px;
+  /* For debug purpose, uncomment if necessary */
+  /* outline: 2px solid red;
+  outline-offset: -2px; */
 }
 
 @media only screen and (min-width: 768px) {
